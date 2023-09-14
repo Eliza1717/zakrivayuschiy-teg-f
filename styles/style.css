@@ -14,6 +14,7 @@
 
 */
 
+/* ------------------------Header---------------------------------------------- */
 .page {
   padding-block-start: 102px;
   color: var(--second-background-color);
@@ -88,6 +89,11 @@
   inset-inline-start: -19px;
 }
 
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
@@ -95,6 +101,10 @@
 
 .theme-menu__button:disabled:focus {
   outline: none;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .theme-menu__button:hover {
@@ -114,50 +124,166 @@
   block-size: 2px;
 }
 
+/* ----------------------------Body------------------------------------------------------ */
+
 .main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   align-items: center;
-  background-color: var(--main-background-color);
+  gap: 50px;
   padding-block-end: 103px;
-}
-
-.content__title {
-  font-family: var(--main-font-family);
-  font-size: 18px;
-  font-variation-settings: "wght" var(--card-subtitle-font-weight, 700);
-  border: 2px solid var(--main-background-color);
-  color: var(--font-text-color);
-  padding: 5px 10px;
+  background-color: var(--main-background-color);
 }
 
 .content__decor__card {
   position: relative;
+  border: 2px solid var(--second-background-color);
   overflow: hidden;
 }
 
-.content__text__card {
+.content__title {
+  border: 2px solid var(--main-background-color);
+  padding: 5px 10px;
+  color: var(--font-text-color);
+  font-family: var(--main-font-family);
   font-size: 18px;
-  font-variation-settings: "wght" var(--card-font-weight, 400);
+  font-variation-settings: "wght" var(--card-subtitle-font-weight, 700);
+}
+
+.content__card__block {
+  position: relative;
+  display: flex;
+  border-block: 2px solid var(--second-background-color);
+}
+
+.card__image-label {
+  position: absolute;
+  opacity: 0.5;
+  color: var(--second-background-color);
+  font-family: var(--accent-font);
+  font-weight: var(--card-font-weight);
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  text-shadow: -1px 0 var(--text-color), 0 1px var(--text-color),
+    1px 0 var(--text-color), 0 -1px var(--text-color);
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+  mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--text-color)) or
+    (-webkit-text-stroke: 1px var(--text-color))
+) {
+  .card__image-label {
+    text-shadow: none;
+    text-rendering: 1px var(--text-color);
+    -webkit-text-stroke: 1px var(--text-color);
+  }
+}
+
+.card__image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.card__first .card__image {
+  filter: sepia(80%);
+}
+
+.card__second .card__image {
+  filter: brightness(200%);
+}
+
+.card__third .card__image {
+  filter: saturate(80%) hue-rotate(30deg);
+}
+
+.card__fourth .card__image {
+  filter: invert(80%);
+}
+
+.card__fifth .card__image {
+  filter: grayscale(82%) sepia(50%);
+}
+
+.card__sixth .card__image {
+  filter: blur(10px);
+}
+
+.card__seventh .card__image {
+  filter: hue-rotate(90deg) contrast(80%) sepia(50%);
+}
+
+.content__text__card {
   display: flex;
   flex-direction: column;
   row-gap: 27px;
   padding: 25px;
+  font-size: 18px;
+  font-variation-settings: "wght" var(--card-font-weight, 400);
 }
 
 .button__card {
   display: flex;
   justify-content: end;
-  padding: 0 25px 25px;
   column-gap: 5px;
+  padding: 0 25px 25px;
+}
+
+.content__card__like {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 7px;
 }
 
 .button__card__text {
-  font-size: 14px;
-  font-variation-settings: "wght" var(--card-font-weight, 400);
-  font-family: var( --accent-font);
-  padding: 9px 17px;
   min-width: 138px;
+  padding: 9px 17px;
+  font-family: var(--accent-font);
+  font-size: 14px;
   background-color: transparent;
+  transition: box-shadow 0.3s ease;
+  font-variation-settings: "wght" var(--card-font-weight, 400);
+}
+
+.button__heart:focus {
+  outline: none;
+}
+
+.button__heart:focus-visible {
+  border: 2px solid var(--second-background-color);
+}
+
+.card__icon-button {
+  display: flex;
+  border: 2px solid transparent;
+  background-color: inherit;
+  transition: border 0.3s ease;
+  cursor: unset;
+  block-size: 38px;
+}
+
+.like__icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  fill: var(--second-background-color);
+  cursor: pointer;
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.like-icon .heart {
+  transition: fill 0.1s;
+  transform-origin: center center;
 }
