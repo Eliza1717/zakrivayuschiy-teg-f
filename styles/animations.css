@@ -22,7 +22,7 @@
   }
 }
 
-/* @keyframes opacity-sparks {
+@keyframes opacity-sparks {
   from {
     opacity: 0;
   }
@@ -37,9 +37,10 @@
   }
 
   100% {
+    
     transform: translateX(0);
   }
-} */
+}
 
 /* ------------Анимация сердца---------------------------- */
 /* -------------Hover------------------------------------- */

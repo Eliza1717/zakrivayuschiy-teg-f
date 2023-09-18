@@ -237,6 +237,30 @@
   column-gap: 5px;
   padding: 0 25px 25px;
 }
+.card__icon-button {
+  display: flex;
+  border: 2px solid transparent;
+  background-color: inherit;
+  transition: border 0.3s ease;
+  cursor: unset;
+  block-size: 38px;
+  justify-content: center;
+  padding: 0;
+}
+
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--second-background-color
+  );
+  transition: border 0.3s ease;
+}
 
 .button__text {
   position: relative;
@@ -261,11 +285,16 @@
   font-variation-settings: "wght" var(--card-font-weight, 400);
 }
 
-.button__heart:focus {
+.button:hover {
+  cursor: pointer;
+  background-color: var(--main-background-color);
+}
+
+.button:focus {
   outline: none;
 }
 
-.button__heart:focus-visible {
+.button:focus-visible {
   border: 2px solid var(--second-background-color);
   outline: none;
   transition: box-shadow 0.3s;
@@ -281,30 +310,20 @@
 }
 
 .button:hover:after {
-  background-color: var(--color-accent);
+  background-color: var(--second-background-color);
   animation: button-hover 0.5s ease-in-out;
 }
 
-.card__icon-button {
-  display: flex;
-  border: 2px solid transparent;
-  background-color: inherit;
-  transition: border 0.3s ease;
-  cursor: unset;
-  block-size: 38px;
+.button:hover .button__text {
+  color: var(--main-background-color);
+  mix-blend-mode: difference;
 }
 
-.card__icon-button:hover {
-  cursor: pointer;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border: 2px solid var(--color-accent);
-  transition: border 0.3s ease;
+.button:hover .img-floppy {
+  fill: var(--main-background-color);
+  stroke: var(--main-background-color);
+  z-index: 2;
+  mix-blend-mode: difference;
 }
 
 .like-icon {
@@ -335,7 +354,7 @@
   gap: 8px;
   padding: 19px;
   font-size: 14px;
-  background-color: transparent;
+  background-color: var(--main-background-color);
   transition: box-shadow 0.3s;
   transition-timing-function: ease;
   cursor: pointer;
@@ -353,9 +372,8 @@
   z-index: 2;
   margin: auto;
   color: var(--second-background-color);
-  inline-size: 21px;
-  block-size: 21px;
-  mix-blend-mode: difference;
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .dialog {
