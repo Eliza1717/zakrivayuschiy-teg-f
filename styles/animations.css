@@ -22,14 +22,6 @@
   }
 }
 
-@keyframes opacity-sparks {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 @keyframes button-hover {
   0% {
