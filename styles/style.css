@@ -164,6 +164,7 @@
   font-weight: var(--card-font-weight);
   font-size: 14px;
   font-style: normal;
+  z-index: 3;
   line-height: normal;
   text-transform: uppercase;
   text-shadow: -1px 0 var(--text-color), 0 1px var(--text-color),
@@ -266,6 +267,7 @@
   position: relative;
   z-index: 2;
   align-self: center;
+  background-color: transparent;
 }
 
 .content__card__like {
@@ -352,7 +354,7 @@
   justify-content: center;
   font-family: var( --accent-font);
   gap: 8px;
-  padding: 19px;
+  padding: 10px;
   font-size: 14px;
   background-color: var(--main-background-color);
   transition: box-shadow 0.3s;
@@ -370,7 +372,7 @@
 .img-floppy {
   position: relative;
   z-index: 2;
-  margin: auto;
+  margin-block-start: 25px;
   color: var(--second-background-color);
   inline-size: 39px;
   block-size: 39px;
