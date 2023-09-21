@@ -277,10 +277,16 @@
 }
 
 .button__text {
+  font-family: var(--accent-font, sans-serif);
+  font-size: 14px;
+  line-height: 90%; /* 12.6px */
+  position: relative;
+  mix-blend-mode: difference;
   position: relative;
   z-index: 2;
   align-self: center;
 }
+
 
 .content__card__like {
   display: flex;
@@ -290,9 +296,10 @@
 }
 
 .button__card__text {
-  min-width: 138px;
+  min-width: 130px;
   padding: 9px 17px;
   font-family: var(--accent-font);
+  color: var(--text-color);
   font-size: 14px;
   background-color: transparent;
   transition: box-shadow 0.3s ease;
@@ -305,6 +312,7 @@
 }
 
 .button:focus {
+  box-shadow: 2px 2px 0px var(--like-color);
   outline: none;
 }
 
@@ -332,7 +340,7 @@
 }
 
 .button:hover .button__text {
-  color: var(--main-background-color);
+  color: var(--text-color);
   mix-blend-mode: difference;
 }
 
