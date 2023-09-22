@@ -377,7 +377,6 @@
   transition: box-shadow 0.3s;
   transition-timing-function: ease;
   cursor: pointer;
-  min-inline-size: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
   mix-blend-mode: difference;
 }
 
@@ -389,7 +388,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 8px;
+  width: min-content;
 }
 
 .footer__button:focus {
@@ -479,8 +480,7 @@ dialog:not([open]) {
   }
 
   .save-button {
-    display: flex;
-    align-items: center;
+    width: auto;
   }
 
   .footer-button {
