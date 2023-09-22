@@ -132,13 +132,13 @@
   align-items: center;
   gap: 50px;
   padding-block-end: 103px;
-  background-color: var(--main-background-color);
 }
 
 .content__decor__card {
   position: relative;
   border: 2px solid var(--second-background-color);
   overflow: hidden;
+  background-color: var(--main-background-color);
 }
 
 .content__title {
