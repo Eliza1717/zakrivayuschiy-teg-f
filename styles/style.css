@@ -16,7 +16,6 @@
 
 /* ------------------------Header---------------------------------------------- */
 .page {
-  padding-block-start: 102px;
   color: var(--second-background-color);
   font-family: var(--main-font-family, sans-serif);
   font-size: 18px;
@@ -39,8 +38,8 @@
 }
 
 .header__container {
-  margin: auto;
-  margin-block-end: 108px;
+  margin-inline: auto;
+  margin-block: 100px;
   border: solid 2px var(--second-background-color);
   background-color: var(--main-background-color);
   inline-size: var(--card-container-size);
@@ -142,7 +141,6 @@
 }
 
 .content__title {
-  border: 2px solid var(--main-background-color);
   padding: 5px 10px;
   color: var(--font-text-color);
   font-family: var(--main-font-family);
@@ -228,6 +226,7 @@
   padding: 25px;
   font-size: 18px;
   font-variation-settings: "wght" var(--card-font-weight, 400);
+  line-height: 21px;
 }
 
 /* ---------------button/icon---------------------------- */
