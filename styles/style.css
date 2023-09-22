@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px;
+  padding: clamp(7.5rem, 7.15rem + 1.5vw, 8.5rem) 0 25px;
   font-family: var(--accent-font);
   text-transform: uppercase;
 }
@@ -138,6 +138,7 @@
   border: 2px solid var(--second-background-color);
   overflow: hidden;
   background-color: var(--main-background-color);
+  max-width: 696px;
 }
 
 .content__title {
@@ -459,18 +460,6 @@ dialog:not([open]) {
 /* ------------------------------------------------------- */
 
 @media (min-width: 1440px) {
-  .header {
-    width: calc(clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem));
-  }
-
-  .content__decor__card {
-    max-width: 696px;
-  }
-
-  .card__like-button {
-    max-width: 38px;
-  }
-
   .img-floppy {
     display: flex;
     width: 21px;
@@ -480,9 +469,5 @@ dialog:not([open]) {
 
   .save-button {
     width: auto;
-  }
-
-  .footer-button {
-    min-inline-size: 0px;
   }
 }
