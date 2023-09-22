@@ -409,11 +409,6 @@
 }
 
 .dialog {
-  position: fixed;
-  inset: 0;
-  display: grid;
-  justify-content: center;
-  align-items: center;
   padding: 30px;
   color: var(--font-text-color);
   font-family: var(--accent-font);
@@ -425,11 +420,8 @@
   inline-size: clamp(21.3rem, 1.5vw + 21rem, 22.3rem);
 }
 
-.dialog__content[open] {
+.dialog[open] {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr fit-content;
-  margin-block-end: 30px;
 }
 
 dialog:not([open]) {
@@ -440,7 +432,7 @@ dialog:not([open]) {
 .dialog-img {
   inline-size: 39px;
   block-size: 39px;
-  margin-right: 20px;
+  margin-right: 20px; 
 }
 
 .dialog__form {
