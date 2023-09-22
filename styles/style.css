@@ -369,12 +369,8 @@
   background-color: var(--main-background-color);
 }
 
-.footer-button {
-  position: relative;
+.footer-text {
   z-index: 2;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
   color: var(--text-color);
   font-family: var(--accent-font);
   font-size: 14px;
