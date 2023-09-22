@@ -24,7 +24,7 @@
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
-  min-block-size: 100dvb;
+  min-block-size: 100vw;
   font-variation-settings: "wght" var(--card-font-weight, 400);
 }
 
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(7.5rem, 7.15rem + 1.5vw, 8.5rem) 0 25px;
+  padding: clamp(7.5rem, 7.15rem + 1.5vw, 8.5rem) 0px 25px;
   font-family: var(--accent-font);
   text-transform: uppercase;
 }
@@ -135,10 +135,10 @@
 
 .content__decor__card {
   position: relative;
+  max-width: 696px;
   border: 2px solid var(--second-background-color);
   overflow: hidden;
   background-color: var(--main-background-color);
-  max-width: 696px;
 }
 
 .content__title {
@@ -226,8 +226,8 @@
   row-gap: 27px;
   padding: 25px;
   font-size: 18px;
-  font-variation-settings: "wght" var(--card-font-weight, 400);
   line-height: 21px;
+  font-variation-settings: "wght" var(--card-font-weight, 400);
 }
 
 /* ---------------button/icon---------------------------- */
@@ -280,11 +280,11 @@
   position: relative;
   z-index: 2;
   align-self: center;
+  color: var(--text-color);
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 90%; /* 12.6px */
   mix-blend-mode: difference;
-  color: var(--text-color);
 }
 
 .content__card__like {
@@ -306,8 +306,8 @@
 }
 
 .button:hover {
-  cursor: pointer;
   transition: fill 0.3s linear;
+  cursor: pointer;
 }
 
 .button:focus {
@@ -381,16 +381,16 @@
 }
 
 .save-button {
-  background-color: transparent;
-  max-width: 335px;
-  padding: 15px;
-  text-wrap: nowrap;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 8px;
   width: min-content;
+  max-width: 335px;
+  padding: 15px;
+  background-color: transparent;
+  text-wrap: nowrap;
 }
 
 .footer__button:focus {
@@ -422,7 +422,7 @@
   text-transform: uppercase;
   background-color: var(--main-background-color);
   transition: opacity 0.3s ease-in-out;
-  inline-size: clamp(21.313rem, 1.502vw + 20.96rem, 22.313rem);
+  inline-size: clamp(21.3rem, 1.5vw + 21rem, 22.3rem);
 }
 
 dialog:not([open]) {
