@@ -35,20 +35,21 @@
 }
 
 /* ------------Анимация сердца---------------------------- */
-/* -------------Hover------------------------------------- */
 
 .like-icon .core {
   fill: var(--main-background-color);
   transition: fill 0.3s linear 0.03s;
 }
 
-.like-icon:hover .core {
-  fill: var(--like-color);
+.like-icon .main-body {
+  fill: var(--main-background-color);
   transition: fill 0.3s linear;
 }
 
-.like-icon .main-body {
-  fill: var(--main-background-color);
+/* -------------Hover------------------------------------- */
+
+.like-icon:hover .core {
+  fill: var(--like-color);
   transition: fill 0.3s linear;
 }
 
@@ -57,18 +58,10 @@
   transition: fill 0.3s linear 0.05s;
 }
 
-/* ------------Activ--------------------------------------- */
-
-.like-icon .core {
-  transition: fill 0.3s linear 0.03s;
-}
+/* ------------Active-------------------------------------- */
 
 .like-icon:active .core {
   fill: var(--fill-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon .main-body {
   transition: fill 0.3s linear;
 }
 
