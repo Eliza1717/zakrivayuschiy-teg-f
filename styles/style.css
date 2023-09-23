@@ -168,9 +168,9 @@
   text-transform: uppercase;
   text-shadow: -1px 0 var(--text-color), 0 1px var(--text-color),
     1px 0 var(--text-color), 0 -1px var(--text-color);
-  inset-inline-end: 25px;
-  inset-block-start: 25px;
   mix-blend-mode: hard-light;
+  top: 20px;
+  right: 10px;
 }
 
 @supports (
@@ -281,7 +281,7 @@
   z-index: 2;
   align-self: center;
   color: var(--text-color);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 90%; /* 12.6px */
   mix-blend-mode: difference;
@@ -386,8 +386,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  width: min-content;
-  max-width: 335px;
+  width: 310px;
   padding: 15px;
   background-color: transparent;
   text-wrap: nowrap;
@@ -464,6 +463,11 @@
   }
 
   .save-button {
-    width: auto;
+    width: 340px;
+  }
+    
+  .card__image-label {
+    top: 25px;
+    right: 25px;
   }
 }
